@@ -4,3 +4,4 @@ function hello(name) {
 
 hello("josh");
 hello('Mauricio')
+hello("this is dumb")

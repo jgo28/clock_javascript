@@ -2,6 +2,5 @@
 function hello(name) {
     alert("Hello " + name);
 }
-
-hello("user");
-hello("player");
+var myHeading = document.querySelector('h1');
+myHeading.textContent = hello("world!");

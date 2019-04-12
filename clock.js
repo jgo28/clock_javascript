@@ -1,3 +1,6 @@
+/*
+    Displays a clock in a HH:MM:SS format that updates every second
+*/
 function time() {
     // retrieve current time and store into variables
     var current_time = new Date();
@@ -26,5 +29,6 @@ function time() {
 
     setTimeout(time, 1000); // update the clock every second
 }
-time();
+
+time(); //call time function to create clock
 

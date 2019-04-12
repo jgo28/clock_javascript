@@ -15,7 +15,7 @@ function time() {
     }
     // add a zero in front of numbers less than 10
     if (hours < 10) {
-        hours = "0" + hours
+        hours = "0" + hours;
     }
     if (minutes < 10) {
         minutes = "0" + minutes;

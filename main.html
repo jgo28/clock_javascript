@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
+    <head><link rel = "stylesheet" href = "main.css" ></head>
 <body>
-    <div id= "display_time" onload= "time()" ></div>
+    <!-- Display the time-->
+    <div id= "display_time" class = "clock" onload= "getTime()" ></div>
+
+    <!-- Switch -->
+    <input type="checkbox" id="switch_mode" /><label for="switch">Toggle</label>
+
     <script type = "text/javascript" src = "clock.js" ></script>
 </body>
 </html> 

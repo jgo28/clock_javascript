@@ -1,15 +1,19 @@
+"use strict";
+
+var time_mode = 0;  // 0 = 12-hour; 1 = 24-hour
+
+var switch_mode = document.getElementById("switch_mode");
+switch_mode.addEventListener ("click", clock_mode);
 /*
     Displays a clock in a HH:MM:SS format that updates every second
 */
-"use strict";
-
-
-function time() {
+function getTime() {
     // retrieve current time and store into variables
     var current_time = new Date();
     var hours = current_time.getHours();
     var minutes = current_time.getMinutes();
     var seconds = current_time.getSeconds();
+
     // the time will be set to either AM or PM, by default it will be set to AM
     var period = "AM"; 
     if (hours > 12) {
@@ -27,19 +31,22 @@ function time() {
         seconds = "0" + seconds;
     }
     var complete_time = hours + ":" + minutes + ":" + seconds + " " + period;
-    // displays time on web page
-    document.getElementById("display_time").innerText = complete_time;  
-    //document.getElementById("display_time").textContent = complete_time;
-    setTimeout(time, 1000); // update the clock every second
+    document.getElementById("display_time").textContent = complete_time;    // displays time on web page
+    setTimeout(getTime, 1000); // update the clock every second
 }
 
-// function clock_mode() {
-//     var mode;
-//     var twelve_mode_button = document.createElement("twelve_mode_button");
-//     twelve_mode_button.addEventListener ("click", function() {
-        
-//     });
-// }
+/*
+    Switches time between 12-hour mode and 24-hour mode
+*/
+function clock_mode() {
+    if (time_mode == 0) {
+        time_mode = 1;
+    }
+    else {
+        time_mode = 0;
+    }
+    console.log(time_mode);
+}
 
-time(); //call time function to create clock
+getTime(); //call time function to create clock
 

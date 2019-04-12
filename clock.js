@@ -6,13 +6,25 @@ function time() {
     var seconds = current_time.getSeconds();
     // the time will be set to either AM or PM, by default it will be set to AM
     var peroid = "AM"; 
-    if (current_time.getHours() > 12) {
+    if (hours > 12) {
         hours = hours - 12;
         period = "PM"
     }
-    var complete_time = hours + ":" + minutes + ":" + s + " " + period;
-    document.getElementById("display_time").innerText = complete_time;
+    // add a zero in front of numbers less than 10
+    if (hours > 10) {
+        hours = 0 + hours
+    }
+    if (minutes > 10) {
+        minutes = 0 + minutes;
+    }
+    if (seconds > 10) {
+        seconds = 0 + seconds;
+    }
+    var complete_time = hours + ":" + minutes + ":" + seconds + " " + period;
+    //document.getElementById("display_time").innerText = complete_time;
     document.getElementById("display_time").textContent = complete_time;
+
+    setTimeout(time, 1000); // update the clock every second
 }
 time();
 

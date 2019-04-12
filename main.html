@@ -6,7 +6,12 @@
     <div id= "display_time" class = "clock" onload= "getTime()" ></div>
 
     <!-- Time mode switch -->
-    <input type="checkbox" id="switch_mode" /><label for="switch">Toggle</label>
+    <!--<input type="checkbox" id="switch_mode" class = "mode_switch" /><label for="switch">Toggle</label>-->
+    <label class="switch">
+            <input type="checkbox" id="switch_mode">
+            <span class="slider round"></span>
+          </label>
+      
 
     <script type = "text/javascript" src = "clock.js" ></script>
 </body>

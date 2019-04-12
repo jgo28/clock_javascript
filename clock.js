@@ -47,7 +47,6 @@ function clock_mode() {
     else {
         time_mode = 0;
     }
-    console.log(time_mode);
 }
 
 getTime(); //call time function to create clock

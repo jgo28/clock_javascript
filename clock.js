@@ -14,14 +14,14 @@ function time() {
         period = "PM"
     }
     // add a zero in front of numbers less than 10
-    if (hours > 10) {
-        hours = 0 + hours
+    if (hours < 10) {
+        hours = "0" + hours
     }
-    if (minutes > 10) {
-        minutes = 0 + minutes;
+    if (minutes < 10) {
+        minutes = "0" + minutes;
     }
-    if (seconds > 10) {
-        seconds = 0 + seconds;
+    if (seconds < 10) {
+        seconds = "0" + seconds;
     }
     var complete_time = hours + ":" + minutes + ":" + seconds + " " + period;
     //document.getElementById("display_time").innerText = complete_time;

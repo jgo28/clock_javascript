@@ -20,7 +20,7 @@ function getTime() {
     if (hours < 12) {
         period = "AM"
     }
-    if (time_mode == 0 && hours > 12)
+    if (time_mode === 0 && hours > 12)
         hours = hours - 12;
 
     // add a zero in front of numbers less than 10
@@ -34,19 +34,19 @@ function getTime() {
         seconds = "0" + seconds;
     }
     var complete_time;
-    if (time_mode == 0)
+    if (time_mode === 0)
         complete_time = hours + ":" + minutes + ":" + seconds + " " + period;
     else
         complete_time = hours + ":" + minutes + ":" + seconds;
     document.getElementById("display_time").textContent = complete_time;    // displays time on web page
-    setTimeout(getTime, 1000); // update the clock every second
+    setTimeout(getTime, 100); // update the clock
 }
 
 /*
     Switches time between 12-hour mode and 24-hour mode
 */
 function clock_mode() {
-    if (time_mode == 0) {
+    if (time_mode === 0) {
         time_mode = 1;
     }
     else {
@@ -57,11 +57,11 @@ function clock_mode() {
 /*
     Hides clock UI
 */
-function hideClock() {
+function hideClock(mode) {
     var x = document.getElementById("display_time");
-    if (x.style.display === "none") 
+    if (mode === 1) // reveal ui elements
         x.style.display = "block";
-    else 
+    else    // hide ui elements
         x.style.display = "none";
 }
 

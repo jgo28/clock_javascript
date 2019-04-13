@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
+    <!-- Load main css file-->
     <head><link rel = "stylesheet" href = "main.css" ></head>
 <body>
     <!-- Display the time-->
     <div id= "display_time" class = "clock" onload= "getTime()" ></div>
 
     <!-- Time mode switch -->
-    <!--<input type="checkbox" id="switch_mode" class = "mode_switch" /><label for="switch">Toggle</label>-->
-    <label class="switch">
-            <input type="checkbox" id="switch_mode">
-            <span class="slider round"></span>
-          </label>
-      
+    <input type="checkbox" id="switch_mode" class = "switch" />
+    <label for="switch">
+        <span class = "time_mode_text" >12-hour/24-hour</span></label>
 
+    <!-- Load Javascript files -->
     <script type = "text/javascript" src = "clock.js" ></script>
 </body>
 </html> 

@@ -38,9 +38,7 @@ function getTime() {
     setTimeout(getTime, 1000); // update the clock every second
 }
 
-/*
-    Switches time between 12-hour mode and 24-hour mode
-*/
+//Toggle between 12/24 hour mode
 function clock_mode() {
     if (time_mode == 0) {
         time_mode = 1;

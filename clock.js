@@ -17,7 +17,7 @@ function getTime() {
 
     // the time will be set to either AM or PM, by default it will be set to AM
     var period = "PM"; 
-    if (hours > 12) {
+    if (hours < 12) {
         if (time_mode == 0)
             hours = hours - 12;
         period = "AM"

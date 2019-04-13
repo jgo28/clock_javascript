@@ -16,11 +16,11 @@ function getTime() {
     var seconds = current_time.getSeconds();
 
     // the time will be set to either AM or PM, by default it will be set to AM
-    var period = "AM"; 
+    var period = "PM"; 
     if (hours > 12) {
         if (time_mode == 0)
             hours = hours - 12;
-        period = "PM"
+        period = "AM"
     }
     // add a zero in front of numbers less than 10
     if (hours < 10) {

@@ -33,7 +33,11 @@ function getTime() {
     if (seconds < 10) {
         seconds = "0" + seconds;
     }
-    var complete_time = hours + ":" + minutes + ":" + seconds + " " + period;
+    var complete_time;
+    if (time_mode == 0)
+        complete_time = hours + ":" + minutes + ":" + seconds + " " + period;
+    else
+        complete_time = hours + ":" + minutes + ":" + seconds;
     document.getElementById("display_time").textContent = complete_time;    // displays time on web page
     setTimeout(getTime, 1000); // update the clock every second
 }

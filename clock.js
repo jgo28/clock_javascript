@@ -1,9 +1,10 @@
 "use strict";
 
-var time_mode = 0;  // 0 = 12-hour; 1 = 24-hour
+var time_mode = 0;  // controls time modes: 0 = 12-hour; 1 = 24-hour
 
-var switch_mode = document.getElementById("switch_mode");
+var switch_mode = document.getElementById("switch_mode");   //create switch_mode id
 switch_mode.addEventListener ("click", clock_mode);
+
 /*
     Displays a clock in a HH:MM:SS format that updates every second
 */
@@ -17,7 +18,8 @@ function getTime() {
     // the time will be set to either AM or PM, by default it will be set to AM
     var period = "AM"; 
     if (hours > 12) {
-        hours = hours - 12;
+        if (time_mode == 0)
+            hours = hours - 12;
         period = "PM"
     }
     // add a zero in front of numbers less than 10
@@ -45,7 +47,6 @@ function clock_mode() {
     else {
         time_mode = 0;
     }
-    console.log(time_mode);
 }
 
 getTime(); //call time function to create clock

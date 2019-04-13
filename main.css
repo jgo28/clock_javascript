@@ -2,6 +2,7 @@ body {
     background: black;
 }
 
+/* Modify appearance of the class clock*/
 .clock {
     position: absolute;
     top: 50%;
@@ -11,4 +12,9 @@ body {
     font-size: 60px;
     font-family: 'Times New Roman';
     letter-spacing: 7px;
+}
+
+/* Properties for text of the time mode switch */
+.time_mode_text {
+    color: white;
 }

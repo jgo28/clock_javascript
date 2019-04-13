@@ -39,7 +39,9 @@ function getTime() {
     else
         complete_time = hours + ":" + minutes + ":" + seconds;
     document.getElementById("display_time").textContent = complete_time;    // displays time on web page
+
     setTimeout(getTime, 100); // update the clock
+
 }
 
 /*

@@ -50,5 +50,15 @@ function clock_mode() {
     }
 }
 
+function hideClock() {
+    var x = document.getElementById("display_time");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } 
+    else {
+        x.style.display = "none";
+    }
+}
+
 getTime(); //call time function to create clock
 

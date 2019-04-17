@@ -3,14 +3,20 @@ body {
     background: black;
 }
 
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
 /* Modify the appearance of clock, timer, and stopwatch buttons */
 .feature_button {
-    position: static;
-    background-color: white;
+    position:relative;
+    background-color: Transparent;
     border: none;
     border-radius: 5px;
-    color: black;
-    padding: 15px 32px;
+    color: white;
+    padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

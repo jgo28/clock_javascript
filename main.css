@@ -5,8 +5,10 @@ body {
 
 /* Modify the appearance of clock, timer, and stopwatch buttons */
 .feature_button {
+    position: static;
     background-color: white;
     border: none;
+    border-radius: 5px;
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -35,3 +37,7 @@ body {
     color: white;
 }
 
+/* Properties for location searchbox text */
+.location_textbox {
+  color: white;
+}

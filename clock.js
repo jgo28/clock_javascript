@@ -14,7 +14,7 @@ function getTime() {
     var hours = current_time.getHours();
     var minutes = current_time.getMinutes();
     var seconds = current_time.getSeconds();
-
+    
     // the time will be set to either AM or PM, by default it will be set to PM
     var period = "PM"; 
     if (hours < 12) {
@@ -39,9 +39,7 @@ function getTime() {
     else
         complete_time = hours + ":" + minutes + ":" + seconds;
     document.getElementById("display_time").textContent = complete_time;    // displays time on web page
-
     setTimeout(getTime, 100); // update the clock
-
 }
 
 /*
@@ -60,11 +58,16 @@ function clock_mode() {
     Hides clock UI
 */
 function hideClock(mode) {
-    var x = document.getElementById("display_time");
-    if (mode === 1) // reveal ui elements
+    var x = document.getElementById("display_time");    //the digital display
+    var y = document.getElementById("24_hour_toggle");  //the toggle for 24-hour mode
+    if (mode === 1) { // reveal ui elements
         x.style.display = "block";
-    else    // hide ui elements
+        y.style.display = "block";
+    }
+    else {  // hide ui elements
         x.style.display = "none";
+        y.style.display = "none";
+    }
 }
 
 getTime(); //call time function to create clock

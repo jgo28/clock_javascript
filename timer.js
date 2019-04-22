@@ -1,3 +1,4 @@
+"use strict";
 //set minutes 
 var mins = 2; 
   

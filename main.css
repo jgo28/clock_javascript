@@ -18,3 +18,33 @@ body {
 .time_mode_text {
     color: white;
 }
+
+.timerInput{
+    width: 7%;
+    position: relative;
+    align-self: auto;
+    border-radius: 10px;
+    border: 0px;
+    font-family: 'Times New Roman';
+    font-size: 60px;
+    background: white;
+    text-align: center;
+    transform: translateY(500%); 
+}
+
+.timerButton{
+    background: white;
+    font-family: 'Times New Roman';
+    font-size: 35px;
+    border-radius: 10px;
+    border: 0px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    transform: translateY(800%); 
+
+}
+
+.timerButton:hover {
+    background-color: rgb(88, 88, 88);
+    color: rgb(84,199,252);
+}

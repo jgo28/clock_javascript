@@ -3,14 +3,15 @@
     <!-- Load main css file-->
     <head><link rel = "stylesheet" href = "main.css" ></head>
 <body>
-    <!-- Display the time-->
-    <div id= "display_time" class = "clock" onload= "getTime()" ></div>
-
+   
     <!-- Buttons to change between different features of the app -->
     <button onclick= "hideClock(1)" class = "clock_button" >Clock</button>
     <button onclick= "hideClock(0)" class = "timer_button" >Timer</button>
     <button onclick= "hideClock(0)" class = "stopwatch_button" >Stopwatch</button>
     
+    <!-- Display the time-->
+    <div id= "display_time" class = "clock" onload= "getTime()" ></div>
+
     <!-- Time mode switch -->
     <input type="checkbox" id="switch_mode" class = "switch" />
     <label for="switch">

@@ -20,8 +20,8 @@ body {
 }
 
 .timerInput{
-    position: absolute;
-    float: left;
+    vertical-align: text-top;
+    align-items: center;
     width: 7%;
     border-radius: 10px;
     border: 0px;
@@ -29,7 +29,7 @@ body {
     font-size: 60px;
     background: white;
     text-align: center;
-    /* transform: translateX(-50%) translateY(-50%);  */
+    transform: translateX(250%) translateY(500%); 
 }
 
 .timerButton{
@@ -40,10 +40,27 @@ body {
     border: 0px;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
-    transform: translateY(800%);
 }
 
 .timerButton:hover {
     background-color: rgb(88, 88, 88);
     color: rgb(84,199,252);
+}
+
+.button1{
+    position: fixed;
+    top: 57%;
+    left: 40.75%;
+}
+
+.button2{
+    position: fixed;
+    top: 57%;
+    left: 47%;
+}
+
+.button3{
+    position: fixed;
+    top: 57%;
+    left: 54.25%;
 }

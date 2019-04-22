@@ -22,7 +22,6 @@ body {
 .timerInput{
     width: 7%;
     position: relative;
-    align-self: auto;
     border-radius: 10px;
     border: 0px;
     font-family: 'Times New Roman';
@@ -40,8 +39,7 @@ body {
     border: 0px;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
-    transform: translateY(800%); 
-
+    transform: translateY(800%);
 }
 
 .timerButton:hover {

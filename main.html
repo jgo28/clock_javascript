@@ -5,9 +5,9 @@
 <body>
    
     <!-- Buttons to change between different features of the app -->
-    <button onclick= "hideClock(1)" class = "clock_button" >Clock</button>
-    <button onclick= "hideClock(0)" class = "timer_button" >Timer</button>
-    <button onclick= "hideClock(0)" class = "stopwatch_button" >Stopwatch</button>
+    <button onclick= "hideClock(1), hideTimer(0)" class = "clock_button" >Clock</button>
+    <button onclick= "hideClock(0), hideTimer(1)" class = "timer_button" >Timer</button>
+    <button onclick= "hideClock(0), hideTimer(0)" class = "stopwatch_button" >Stopwatch</button>
     
     <!-- Display the time-->
     <div id= "display_time" class = "clock" onload= "getTime()" ></div>
@@ -18,15 +18,17 @@
         <span class = "time_mode_text" >12-hour/24-hour</span></label>
 
     <!-- Timer -->
-    <label for="hour"></label><input id="hours" type="text" maxlength="2" value=00 class="timerInput"> 
-    <label for="min"></label><input id="minutes" type="text" maxlength="2" value=00 class="timerInput">
-    <label for="sec"><input id = "seconds" type = "text" maxlength="2" value=00 class="timerInput"><br/><br />
-    <button id="start" class="timerButton button1">Start</button>
-    <button id="pause" class="timerButton button2">Pause</button>
-    <button id="reset" class="timerButton button3">Reset</button>
+    <div id="timer">
+        <label for="hour"></label><input id="hours" type="text" maxlength="2" value=00 class="timerInput"> 
+        <label for="min"></label><input id="minutes" type="text" maxlength="2" value=00 class="timerInput">
+        <label for="sec"><input id = "seconds" type = "text" maxlength="2" value=00 class="timerInput"><br/><br />
+        <button id="start" class="timerButton button1">Start</button>
+        <button id="pause" class="timerButton button2">Pause</button>
+        <button id="reset" class="timerButton button3">Reset</button>
+    </div>
   
 </body>
     <!-- Load Javascript files -->
     <script type = "text/javascript" src = "clock.js" ></script>
-    <!-- <script type = "text/javascript" src = "timer.js" ></script> -->
+    <script type = "text/javascript" src = "timer.js" ></script>
 </html> 

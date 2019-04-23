@@ -1,30 +1,41 @@
-"use strict";
+ "use strict";
 
-var hours = document.getElementById("hour").value;
-var minutes = document.getElementById("min").value;
-var seconds = document.getElementById("sec").value;
-document.getElementById("time_left").innerText = "00:00:00";    // displays time on web page
-
-start.onclick = function(){
-  time_left =  hours + ":" + minutes + ":" + seconds;  
-  document.getElementById("time_left").innerHTML = time_left;    // displays time on web page
+ /*
+    Hides timer UI
+*/
+function hideTimer(mode) {
+  var timer = document.getElementById("timer");
+  if (mode === 1) // reveal ui elements
+      timer.style.display = "block";
+  else    // hide ui elements
+      timer.style.display = "none";
 }
 
+// var hours = document.getElementById("hour").value;
+// var minutes = document.getElementById("min").value;
+// var seconds = document.getElementById("sec").value;
+// document.getElementById("time_left").innerText = "00:00:00";    // displays time on web page
 
-function getTime() {
-  var hours = document.getElementById("hour").value;
-  var minutes = document.getElementById("min").value;
-  var seconds = document.getElementById("sec").value;
-  document.getElementById("time_left").innerText = "00:00:00";
-  // time_left =  hours + ":" + minutes + ":" + seconds;  
-  // document.getElementById("time_left").innerText = time_left;
-  setTimeout(getTime, 100); // update the clock
-
-}
+// start.onclick = function(){
+//   time_left =  hours + ":" + minutes + ":" + seconds;  
+//   document.getElementById("time_left").innerHTML = time_left;    // displays time on web page
+// }
 
 
+// function getTime() {
+//   var hours = document.getElementById("hour").value;
+//   var minutes = document.getElementById("min").value;
+//   var seconds = document.getElementById("sec").value;
+//   document.getElementById("time_left").innerText = "00:00:00";
+//   // time_left =  hours + ":" + minutes + ":" + seconds;  
+//   // document.getElementById("time_left").innerText = time_left;
+//   setTimeout(getTime, 100); // update the clock
 
-getTime();
+// }
+
+
+
+// getTime();
 
 
 

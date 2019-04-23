@@ -29,7 +29,7 @@ body {
     font-size: 60px;
     background: white;
     text-align: center;
-    transform: translateX(250%) translateY(500%); 
+    transform: translateX(550%) translateY(470%); 
 }
 
 .timerButton{
@@ -40,6 +40,7 @@ body {
     border: 0px;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
+    width: 100px;
 }
 
 .timerButton:hover {
@@ -49,18 +50,18 @@ body {
 
 .button1{
     position: fixed;
-    top: 57%;
-    left: 40.75%;
+    top: 56%;
+    left: 39.4%;
 }
 
 .button2{
     position: fixed;
-    top: 57%;
-    left: 47%;
+    top: 56%;
+    left: 46.8%;
 }
 
 .button3{
     position: fixed;
-    top: 57%;
+    top: 56%;
     left: 54.25%;
 }

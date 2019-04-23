@@ -1,15 +1,36 @@
  "use strict";
-
- /*
-    Hides timer UI
-*/
+ 
+// Hides timer UI
 function hideTimer(mode) {
   var timer = document.getElementById("timer");
-  if (mode === 1) // reveal ui elements
+  var buttons = document.getElementById("timer_buttons");
+  if (mode === 1){// reveal ui elements
       timer.style.display = "block";
-  else    // hide ui elements
+      buttons.style.display = "block";
+  }else{    // hide ui elements
       timer.style.display = "none";
+      buttons.style.display = "none";
+  }
 }
+
+function reset(){
+  var hours = document.getElementById("hours");
+  var minutes = document.getElementById("minutes");
+  var seconds = document.getElementById("seconds");
+  hours.value = "";
+  minutes.value = "";
+  seconds.value = "";
+
+}
+
+// function reset(){
+//   alert("this")
+// }
+
+document.getElementById("reset").onclick = reset;
+
+
+
 
 // var hours = document.getElementById("hour").value;
 // var minutes = document.getElementById("min").value;

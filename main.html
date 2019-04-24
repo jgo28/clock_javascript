@@ -13,37 +13,47 @@
     <!-- Display the time-->
     <div id= "display_time" class = "clock" onload= "getTime()" ></div>
 
-    <!-- Time mode switch -->
-    <div id = "24_hour_toggle" class = "checkbox" >
-        <label>
-            <input type="checkbox" id="switch_mode" data-toggle="toggle"> 
-            <span class = "time_mode_text" >24-hour mode</span>
-        </label>
-    </div>
-
-    <!-- Selection menu for timezones: timezones are found with the name in the tz timezone database -->
-    <div id= "change_timezone" class="timezone-select" style="width:200px;">
-        <select id = "timezone_select">
-        <option value="0">Select time zone:</option>
-        <option value="America/Los_Angeles">America/Los_Angeles</option>
-        <option value="America/Denver">America/Denver</option>
-        <option value="America/Chicago">America/Chicago</option>
-        <option value="America/New_York">America/New_York</option>
-        <option value="America/Sao_Paulo">America/Sao_Paulo</option>
-        <option value="Australia/Sydney">Australia/Sydney</option>
-        <option value="Asia/Tokyo">Asia/Tokyo</option>
-        <option value="Asia/Shanghai">Asia/Shanghai</option>
-        <option value="Asia/Dubai">Asia/Dubai</option>
-        <option value="Europe/Moscow">Europe/Moscow</option>
-        <option value="Europe/Helsinki">Europe/Helsinki</option>
-        <option value="Europe/Vatican">Europe/Vatican</option>
-        <option value="Europe/London">Europe/London</option>
-        <option value="Pacific/Honolulu">Pacific/Honolulu</option>
-        <option value="Pacific/Samoa">Pacific/Samoa</option>
-        </select>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <!-- Time mode switch -->
+            <div id = "24_hour_toggle" class = "checkbox" >
+                <label>
+                    <input type="checkbox" id="switch_mode" data-toggle="toggle"> 
+                    <span class = "time_mode_text" >24-hour mode</span>
+                </label>
+            </div>
+            
+         <!-- Selection menu for timezones: timezones are found with the name in the tz timezone database -->
+        <div id= "change_timezone" class="timezone-select" style="width:200px;">
+            <select id = "timezone_select">
+            <option value="0">Select time zone:</option>
+            <option value="America/Los_Angeles">America/Los_Angeles</option>
+            <option value="America/Denver">America/Denver</option>
+            <option value="America/Chicago">America/Chicago</option>
+            <option value="America/New_York">America/New_York</option>
+            <option value="America/Sao_Paulo">America/Sao_Paulo</option>
+            <option value="Australia/Sydney">Australia/Sydney</option>
+            <option value="Asia/Tokyo">Asia/Tokyo</option>
+            <option value="Asia/Shanghai">Asia/Shanghai</option>
+            <option value="Asia/Dubai">Asia/Dubai</option>
+            <option value="Europe/Moscow">Europe/Moscow</option>
+            <option value="Europe/Helsinki">Europe/Helsinki</option>
+            <option value="Europe/Vatican">Europe/Vatican</option>
+            <option value="Europe/London">Europe/London</option>
+            <option value="Pacific/Honolulu">Pacific/Honolulu</option>
+            <option value="Pacific/Samoa">Pacific/Samoa</option>
+            </select>
+        </div>
+      </div>
+    
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; Options</button> 
+        <h2>Collapsed Sidebar</h2>
+        <p>Content...</p>
     </div>
 
     <!-- Load Javascript files -->
     <script type = "text/javascript" src = "clock.js" ></script>
+    <script type = "text/javascript" src = "settings.js" ></script>
 </body>
 </html> 

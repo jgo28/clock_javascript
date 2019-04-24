@@ -25,6 +25,9 @@ function getTime() {
     if (time_mode === 0 && hours > 12)
         hours = hours - 12;
 
+    if (hours === 0 && time_mode === 0) {  // only here because the timezone converter will make 12 AM -> 0 AM
+        hours = 12;
+    }
     // add a zero in front of numbers less than 10
     if (hours < 10) {
         hours = "0" + hours;

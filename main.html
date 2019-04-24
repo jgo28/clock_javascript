@@ -13,18 +13,29 @@
     <!-- Display the time-->
     <div id= "display_time" class = "clock" onload= "getTime()" ></div>
 
-        <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <!-- Time mode switch -->
-            <div id = "24_hour_toggle" class = "checkbox" >
-                <label>
-                    <input type="checkbox" id="switch_mode" data-toggle="toggle"> 
-                    <span class = "time_mode_text" >24-hour mode</span>
-                </label>
-            </div>
-            
-         <!-- Selection menu for timezones: timezones are found with the name in the tz timezone database -->
-        <div id= "change_timezone" class="timezone-select" style="width:200px;">
+    <!-- Options sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <body text = "white">Application:</body>
+        <div id= "change_background" class="selection_button" style="width:200px;">
+            <select id = "background_select">
+                <option value="0">No background</option>
+                <option value="url('milky_way.jpg')">Milky way</option>"
+            </select>
+        </div>
+
+        <body text = "white">Clock:</body>
+        <!-- 24-hour mode switch -->
+        <div id = "24_hour_toggle" class = "checkbox" >
+            <label>
+                <input type="checkbox" id="switch_mode" data-toggle="toggle"> 
+                <span class = "time_mode_text" >24-hour mode</span>
+            </label>
+        </div>
+        
+        <!-- Selection menu for timezones: timezones are found with the name in the tz timezone database -->
+        <div id= "change_timezone" class="selection_button" style="width:200px;">
             <select id = "timezone_select">
             <option value="0">Select time zone:</option>
             <option value="America/Los_Angeles">America/Los_Angeles</option>
@@ -44,12 +55,11 @@
             <option value="Pacific/Samoa">Pacific/Samoa</option>
             </select>
         </div>
-      </div>
+    </div>
     
+    <!-- Physical options button-->
     <div id="main">
         <button class="openbtn" onclick="openNav()">&#9776; Options</button> 
-        <h2>Collapsed Sidebar</h2>
-        <p>Content...</p>
     </div>
 
     <!-- Load Javascript files -->

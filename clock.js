@@ -1,3 +1,7 @@
+/*
+    Contains functions to create the clock and change certain aspects of what time is displayed on
+    the webpage.
+*/
 "use strict";
 
 var time_mode = 0;  // controls time modes: 0 = 12-hour; 1 = 24-hour
@@ -91,17 +95,17 @@ function clock_mode() {
 */
 function hideClock(mode) {
     var x = document.getElementById("display_time");    //the digital display
-    var y = document.getElementById("24_hour_toggle");  //the toggle for 24-hour mode
-    var z = document.getElementById("change_timezone"); // timezone selection menu
+    // var y = document.getElementById("24_hour_toggle");  //the toggle for 24-hour mode
+    // var z = document.getElementById("change_timezone"); // timezone selection menu
     if (mode === 1) { // reveal ui elements
         x.style.display = "block";
-        y.style.display = "block";
-        z.style.display = "block";
+        // y.style.display = "block";
+        // z.style.display = "block";
     }
     else {  // hide ui elements
         x.style.display = "none";
-        y.style.display = "none";
-        z.style.display = "none";
+        // y.style.display = "none";
+        // z.style.display = "none";
     }
 }
 

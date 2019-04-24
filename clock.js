@@ -2,15 +2,17 @@
 
 var time_mode = 0;  // controls time modes: 0 = 12-hour; 1 = 24-hour
 
-var switch_mode = document.getElementById("switch_mode");   //create switch_mode id
+var switch_mode = document.getElementById("switch_mode");   // create switch_mode id
 switch_mode.addEventListener ("click", clock_mode);
 
 /*
     Displays a clock in a HH:MM:SS format that updates every second
 */
 function getTime() {
-    // retrieve current time and store into variables
-    var current_time = new Date();
+    var timezone_value = document.getElementById("timezone_select").value;  // retrieves the timezone the user selected
+    var current_time = new Date();   // retrieve current time and store into variables
+    current_time = select_menu_options(timezone_value); //change timezone based on user selection
+ 
     var hours = current_time.getHours();
     var minutes = current_time.getMinutes();
     var seconds = current_time.getSeconds();
@@ -40,6 +42,31 @@ function getTime() {
         complete_time = hours + ":" + minutes + ":" + seconds;
     document.getElementById("display_time").textContent = complete_time;    // displays time on web page
     setTimeout(getTime, 100); // update the clock
+}
+
+/*
+    Function changes timezone based on the value of the item from selection menu
+*/
+function select_menu_options(value) {
+    
+    var newTime = new Date();  
+    if (value == 0) {   // keep default timezone
+        // console.log(timezone_value);
+        newTime = new Date(); 
+    } 
+    else if (value == 1) {
+        newTime = changeTimezone("Australia/Brisbane")
+    }
+    return newTime;
+}
+
+/*
+    Function changes timezone based on the string input
+*/
+function changeTimezone(timezone_string) {
+    var newTime = new Date().toLocaleString("en-US", {timeZone: timezone_string});
+    newTime = new Date(newTime);
+    return newTime;
 }
 
 /*

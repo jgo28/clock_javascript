@@ -11,7 +11,7 @@ switch_mode.addEventListener ("click", clock_mode);
 function getTime() {
     var timezone_value = document.getElementById("timezone_select").value;  // retrieves the timezone the user selected
     var current_time = new Date();   // retrieve current time and store into variables
-    current_time = select_menu_options(timezone_value); //change timezone based on user selection
+    current_time = select_menu_options(timezone_value); //change timezone based on user selection from menu
  
     var hours = current_time.getHours();
     var minutes = current_time.getMinutes();
@@ -45,23 +45,25 @@ function getTime() {
 }
 
 /*
-    Function changes timezone based on the value of the item from selection menu
+    Function changes timezone based on the value of the item from selection menu.
 */
 function select_menu_options(value) {
-    
     var newTime = new Date();  
     if (value == 0) {   // keep default timezone
         // console.log(timezone_value);
         newTime = new Date(); 
     } 
-    else if (value == 1) {
-        newTime = changeTimezone("Australia/Brisbane")
+    else {  // pass in a string and change the timezone based on the name in tz database
+        newTime = changeTimezone(value)
     }
     return newTime;
 }
 
 /*
     Function changes timezone based on the string input
+
+    timezone_string is a string that corresponds with a timezone found in the tz
+    timezone database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 */
 function changeTimezone(timezone_string) {
     var newTime = new Date().toLocaleString("en-US", {timeZone: timezone_string});
@@ -87,13 +89,16 @@ function clock_mode() {
 function hideClock(mode) {
     var x = document.getElementById("display_time");    //the digital display
     var y = document.getElementById("24_hour_toggle");  //the toggle for 24-hour mode
+    var z = document.getElementById("change_timezone"); // timezone selection menu
     if (mode === 1) { // reveal ui elements
         x.style.display = "block";
         y.style.display = "block";
+        z.style.display = "block";
     }
     else {  // hide ui elements
         x.style.display = "none";
         y.style.display = "none";
+        z.style.display = "none";
     }
 }
 

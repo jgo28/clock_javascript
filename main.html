@@ -3,18 +3,45 @@
     <!-- Load main css file-->
     <head><link rel = "stylesheet" href = "main.css" ></head>
 <body>
-    <!-- Buttons to change between different features of the app -->
-    <button onclick= "hideClock(1)" class = "clock_button" >Clock</button>
-    <button onclick= "hideClock(0)" class = "timer_button" >Timer</button>
-    <button onclick= "hideClock(0)" class = "stopwatch_button" >Stopwatch</button>
+    <div class="topnav" style="text-align:center;">
+        <!-- Buttons to change between different features of the app -->
+        <button onclick= "hideClock(1)" class = "feature_button" >Clock</button>
+        <button onclick= "hideClock(0)" class = "feature_button" >Timer</button>
+        <button onclick= "hideClock(0)" class = "feature_button" >Stopwatch</button>
+    </div>
 
     <!-- Display the time-->
     <div id= "display_time" class = "clock" onload= "getTime()" ></div>
 
     <!-- Time mode switch -->
-    <input type="checkbox" id="switch_mode" class = "switch" />
-    <label for="switch">
-        <span class = "time_mode_text" >12-hour/24-hour</span></label>
+    <div id = "24_hour_toggle" class = "checkbox" >
+        <label>
+            <input type="checkbox" id="switch_mode" data-toggle="toggle"> 
+            <span class = "time_mode_text" >24-hour mode</span>
+        </label>
+    </div>
+
+    <!-- Selection menu for timezones: timezones are found with the name in the tz timezone database -->
+    <div id= "change_timezone" class="timezone-select" style="width:200px;">
+        <select id = "timezone_select">
+        <option value="0">Select time zone:</option>
+        <option value="America/Los_Angeles">America/Los_Angeles</option>
+        <option value="America/Denver">America/Denver</option>
+        <option value="America/Chicago">America/Chicago</option>
+        <option value="America/New_York">America/New_York</option>
+        <option value="America/Sao_Paulo">America/Sao_Paulo</option>
+        <option value="Australia/Sydney">Australia/Sydney</option>
+        <option value="Asia/Tokyo">Asia/Tokyo</option>
+        <option value="Asia/Shanghai">Asia/Shanghai</option>
+        <option value="Asia/Dubai">Asia/Dubai</option>
+        <option value="Europe/Moscow">Europe/Moscow</option>
+        <option value="Europe/Helsinki">Europe/Helsinki</option>
+        <option value="Europe/Vatican">Europe/Vatican</option>
+        <option value="Europe/London">Europe/London</option>
+        <option value="Pacific/Honolulu">Pacific/Honolulu</option>
+        <option value="Pacific/Samoa">Pacific/Samoa</option>
+        </select>
+    </div>
 
     <!-- Load Javascript files -->
     <script type = "text/javascript" src = "clock.js" ></script>

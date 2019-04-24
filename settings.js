@@ -19,10 +19,10 @@ function updateApplication() {
 */
 function setBackground(image_url, background_color) {
     // if (background === 0) {
-    //     document.body.style.opacity.backgroundImage = "";
+    //     document.body.style.opacity = "";
     // }
     // else {
-    //     document.body.style.opacity.backgroundImage = "1";
+    //     document.body.style.opacity = "1";
     // }
     document.body.style.backgroundColor = background_color;
     document.body.style.backgroundImage = image_url;

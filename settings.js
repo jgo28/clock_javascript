@@ -18,14 +18,13 @@ function updateApplication() {
     Changes the background of an image
 */
 function setBackground(image_url, background_color) {
-    // if (background === 0) {
-    //     document.body.style.opacity = "";
-    // }
-    // else {
-    //     document.body.style.opacity = "1";
-    // }
-    document.body.style.backgroundColor = background_color;
-    document.body.style.backgroundImage = image_url;
+    if (image_url == 0) {   // get rid of background image
+        document.body.style.backgroundImage = "";
+    }
+    else {  // add background image
+        document.body.style.backgroundColor = background_color;
+        document.body.style.backgroundImage = image_url;  
+    }
 }
 
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */

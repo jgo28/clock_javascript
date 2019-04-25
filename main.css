@@ -6,7 +6,7 @@ body {
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(182, 182, 182, 0.25);
 }
 
 /* Modify the appearance of clock, timer, and stopwatch buttons */
@@ -88,14 +88,14 @@ body {
     font-size: 20px;
     font-family: 'Times New Roman';
     cursor: pointer;
-    background-color: #111;
+    background-color: Transparent;
     color: white;
     padding: 10px 15px;
     border: none;
   }
   
   .openbtn:hover {
-    background-color: #444;
+    background-color: rgb(190, 190, 190, 0.25);
   }
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */

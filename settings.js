@@ -20,7 +20,7 @@ function updateApplication() {
 function setBackground(image_url, background_color) {
     if (image_url == 0) {   // get rid of background image
         document.body.style.backgroundImage = "";
-        document.body.style.backgroundColor = background_color;
+        document.body.style.backgroundColor = background_color; // set background color
     }
     else {  // add background image
         document.body.style.backgroundImage = image_url;  

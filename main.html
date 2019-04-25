@@ -16,60 +16,67 @@
     <!-- Options sidebar -->
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <p>
-            <body text = "white">Application:</body>
-        </p>
-        <!-- Options to change the background-->
-        <div id= "change_background" class="selection_button" style="width:200px;">
-            <select id = "background_select">
-                <option value="0">No background image</option>
-                <option value="url('backgrounds/space.jpg')">Space</option>"
-                <option value="url('backgrounds/gradiant.png')">Gradiant</option>"
-                <option value="url('backgrounds/rainy_road.jpg')">Rainy Road</option>"
-                <option value="url('backgrounds/mountain.jpg')">Mountain</option>"
-            </select>
-        </div>
 
-        <div id= "change_bcolor" class="selection_button" style="width:200px;">
-            <select id = "bcolor_select">
-                <option value="black">Default background color</option>
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-            </select>
-        </div>
-        <p>
-            <body text = "white">Clock:</body>
-        </p>
-        <!-- 24-hour mode switch -->
-        <div id = "24_hour_toggle" class = "checkbox" >
-            <label>
-                <input type="checkbox" id="switch_mode" data-toggle="toggle"> 
-                <span class = "time_mode_text" >24-hour mode</span>
-            </label>
-        </div>
-        
-        <!-- Selection menu for timezones: timezones are found with the name in the tz timezone database -->
-        <div id= "change_timezone" class="selection_button" style="width:200px;">
-            <select id = "timezone_select">
-            <option value="0">Select time zone:</option>
-            <option value="America/Los_Angeles">America/Los_Angeles</option>
-            <option value="America/Denver">America/Denver</option>
-            <option value="America/Chicago">America/Chicago</option>
-            <option value="America/New_York">America/New_York</option>
-            <option value="America/Sao_Paulo">America/Sao_Paulo</option>
-            <option value="Australia/Sydney">Australia/Sydney</option>
-            <option value="Asia/Tokyo">Asia/Tokyo</option>
-            <option value="Asia/Shanghai">Asia/Shanghai</option>
-            <option value="Asia/Dubai">Asia/Dubai</option>
-            <option value="Europe/Moscow">Europe/Moscow</option>
-            <option value="Europe/Helsinki">Europe/Helsinki</option>
-            <option value="Europe/Vatican">Europe/Vatican</option>
-            <option value="Europe/London">Europe/London</option>
-            <option value="Pacific/Honolulu">Pacific/Honolulu</option>
-            <option value="Pacific/Samoa">Pacific/Samoa</option>
-            </select>
-        </div>
+        <!-- Application settings-->
+        <p><body text = "white">Application:</body></p>
+            <!-- Options to change the background-->
+            <div id= "change_background" class="selection_button" style="width:200px;">
+                <select id = "background_select">
+                    <option value="0">No background image</option>
+                    <option value="url('backgrounds/space.jpg')">Space</option>"
+                    <option value="url('backgrounds/gradiant.png')">Gradiant</option>"
+                    <option value="url('backgrounds/rainy_road.jpg')">Rainy Road</option>"
+                    <option value="url('backgrounds/mountain.jpg')">Mountain</option>"
+                </select>
+            </div>
+
+            <div id= "change_bcolor" class="selection_button" style="width:200px;">
+                <select id = "bcolor_select">
+                    <option value="black">Default background color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            </div>
+
+        <!-- Clock settings -->
+        <p><body text = "white">Clock:</body></p>
+
+            <!-- 24-hour mode switch -->
+            <div id = "24_hour_toggle" class = "checkbox" >
+                <label>
+                    <input type="checkbox" id="switch_mode" data-toggle="toggle"> 
+                    <span class = "time_mode_text" >24-hour mode</span>
+                </label>
+            </div>
+            
+            <!-- Selection menu for timezones: timezones are found with the name in the tz timezone database -->
+            <div id= "change_timezone" class="selection_button" style="width:200px;">
+                <select id = "timezone_select">
+                <option value="0">Select time zone:</option>
+                <option value="America/Los_Angeles">America/Los_Angeles</option>
+                <option value="America/Denver">America/Denver</option>
+                <option value="America/Chicago">America/Chicago</option>
+                <option value="America/New_York">America/New_York</option>
+                <option value="America/Sao_Paulo">America/Sao_Paulo</option>
+                <option value="Australia/Sydney">Australia/Sydney</option>
+                <option value="Asia/Tokyo">Asia/Tokyo</option>
+                <option value="Asia/Shanghai">Asia/Shanghai</option>
+                <option value="Asia/Dubai">Asia/Dubai</option>
+                <option value="Europe/Moscow">Europe/Moscow</option>
+                <option value="Europe/Helsinki">Europe/Helsinki</option>
+                <option value="Europe/Vatican">Europe/Vatican</option>
+                <option value="Europe/London">Europe/London</option>
+                <option value="Pacific/Honolulu">Pacific/Honolulu</option>
+                <option value="Pacific/Samoa">Pacific/Samoa</option>
+                </select>
+            </div>
+
+        <!-- Timer settings-->
+        <p><body text = "white">Timer:</body></p>
+    
+        <!-- Stopwatch settings-->
+        <p><body text = "white">Stopwatch:</body></p>
     </div>
     
     <!-- Physical options button-->

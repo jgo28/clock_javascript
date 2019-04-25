@@ -15,7 +15,7 @@ function updateApplication() {
 }
 
 /* 
-    Changes the background of an image
+    Changes the background to a color or image
 */
 function setBackground(image_url, background_color) {
     if (image_url == 0) {   // get rid of background image
@@ -39,4 +39,4 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "0";
 }
 
-updateApplication();
+updateApplication();    // call function to update application

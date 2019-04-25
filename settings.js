@@ -8,7 +8,7 @@
 */
 function updateApplication() {
     var background = document.getElementById("background_select").value;
-    var bColor = "black";   //background color
+    var bColor = document.getElementById("bcolor_select").value;  //background color
     setBackground(background, bColor);
 
     setTimeout(updateApplication, 100); // update the background
@@ -20,9 +20,9 @@ function updateApplication() {
 function setBackground(image_url, background_color) {
     if (image_url == 0) {   // get rid of background image
         document.body.style.backgroundImage = "";
+        document.body.style.backgroundColor = background_color;
     }
     else {  // add background image
-        document.body.style.backgroundColor = background_color;
         document.body.style.backgroundImage = image_url;  
     }
 }

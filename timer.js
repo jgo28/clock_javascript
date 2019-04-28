@@ -96,9 +96,3 @@ function startTimer(duration, display) {
   timer();
   setInterval(timer, 100);
 }
-
-// window.onload = function () {
-//   var fiveMinutes = 60 * 5,
-//       display = document.querySelector('#time');
-//   startTimer(fiveMinutes, display);
-// };

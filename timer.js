@@ -16,6 +16,10 @@ function hideTimer(mode) {
   }
 }
 
+document.getElementById("timer").style.display = "none";
+document.getElementById("timer_buttons").style.display = "none";
+document.getElementById("t_clock").style.display = "none";
+
 //Reset button
 function reset(){
   var hours = document.getElementById("hours");
@@ -41,7 +45,7 @@ function start(){
   t_clock.style.display = "block";
   timer.style.display = "none";
 
-  var total_time_seconds = (hours * 360) + (minutes * 60) + seconds
+  var total_time_seconds = (hours * 360 * 10) + (minutes * 60) + seconds
   
   var display = document.querySelector('#time');
 
@@ -65,10 +69,16 @@ function startTimer(duration, display) {
       // startTimer() was called
       diff = duration - (((Date.now() - start) / 1000) | 0);
 
+
       // does the same job as parseInt truncates the float
-      seconds = Math.floor( (diff) % 60 );
+      hours = Math.floor((diff/(60*60)));
       minutes = Math.floor( (diff/60) % 60 );
-      hours = Math.floor((diff/(60*60))) % 24;
+      seconds = Math.floor( (diff) % 60 );
+      
+      console.log(diff)
+      console.log(hours)
+      // console.log(seconds)
+      // console.log(minutes)
 
       hours = hours < 10 ? "0" + hours : hours;
       minutes = minutes < 10 ? "0" + minutes : minutes;

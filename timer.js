@@ -1,4 +1,8 @@
 "use strict";
+
+document.getElementById("timer").style.display = "none";
+document.getElementById("timer_buttons").style.display = "none";
+document.getElementById("t_clock").style.display = "none";
  
 // Hides timer UI
 function hideTimer(mode) {
@@ -16,9 +20,6 @@ function hideTimer(mode) {
   }
 }
 
-document.getElementById("timer").style.display = "none";
-document.getElementById("timer_buttons").style.display = "none";
-document.getElementById("t_clock").style.display = "none";
 
 //Reset button
 function reset(){

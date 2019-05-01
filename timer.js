@@ -22,20 +22,30 @@ function hideTimer(mode) {
 
 //Reset button
 function reset(){
+  document.getElementById("start").removeAttribute("disabled");
+
   var hours = document.getElementById("hours");
   var minutes = document.getElementById("minutes");
   var seconds = document.getElementById("seconds");
   var timer = document.getElementById("timer");
   var clock = document.getElementById("t_clock");
-  clock.style.display = "none";
+  var time = document.getElementById("time");
+
   timer.style.display = "block";
+  clock.style.display = "none";
+  time.style.display = "none";
+
   hours.value = "";
   minutes.value = "";
   seconds.value = "";
 }
 
+
+var display = document.querySelector('#time');
 //Start Button
 function start(){
+  document.getElementById("start").disabled = "true";
+
   var hours = document.getElementById("hours").value;
   var minutes = document.getElementById("minutes").value;
   var seconds = document.getElementById("seconds").value;
@@ -46,21 +56,40 @@ function start(){
   timer.style.display = "none";
 
   var total_time_seconds = (hours * 360 * 10) + (minutes * 60) + seconds
-  
-  var display = document.querySelector('#time');
-
   document.getElementById("t_clock").textContent =  startTimer(total_time_seconds, display);
+
+}
+
+var interval;
+var paused = false;
+var timeLeft;
+function pause(){
+  console.log(diff)
+  if(!paused){
+    paused = true;
+    clearInterval(interval);
+    document.getElementById("pause").textContent = "Resume";
+    timeLeft = diff;
+  }
+  else if(paused){
+    paused = false;
+    document.getElementById("pause").textContent = "Pause";
+    document.getElementById("t_clock").textContent =  startTimer(timeLeft, display);
+  }
+  console.log(paused);
 
 }
 
 //Handle buttons
 document.getElementById("reset").onclick = reset;
 document.getElementById("start").onclick = start;
+document.getElementById("pause").onclick = pause;
 
 
+
+var diff;
 function startTimer(duration, display) {
   var start = Date.now(),
-      diff,
       hours,
       minutes,
       seconds;
@@ -74,11 +103,6 @@ function startTimer(duration, display) {
       hours = Math.floor((diff/(60*60)));
       minutes = Math.floor( (diff/60) % 60 );
       seconds = Math.floor( (diff) % 60 );
-      
-      console.log(diff)
-      console.log(hours)
-      // console.log(seconds)
-      // console.log(minutes)
 
       hours = hours < 10 ? "0" + hours : hours;
       minutes = minutes < 10 ? "0" + minutes : minutes;
@@ -94,5 +118,5 @@ function startTimer(duration, display) {
   };
   // we don't want to wait a full second before the timer starts
   timer();
-  setInterval(timer, 100);
+  interval = setInterval(timer, 100);
 }

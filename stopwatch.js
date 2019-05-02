@@ -14,7 +14,7 @@ let displayMinutes = 0;
 let displayHours = 0;
 
 //Define var to hold setInterval() function
-let interval = null;
+let intervalSW = null;
 
 //Define var to hold stopwatch status
 //False = stopped, True = started
@@ -77,8 +77,8 @@ function startStop(){
 
     if(status === false){
 
-        //Start the stopwatch(by calling the set interval function)
-        interval = window.setInterval(stopWatch, 1000);
+        //Start the stopwatch(by calling the set intervalSWfunction)
+        intervalSW= window.setInterval(stopWatch, 1000);
         document.getElementById("startStop").innerHTML = "Stop";
         status = true;
     }

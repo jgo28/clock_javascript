@@ -64,7 +64,11 @@ body {
     border: 0px;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
-    width: 100px;
+    width: 150px;
+}
+
+.startButton:disabled {
+  background: gray;
 }
 
 .timerButton:hover {
@@ -75,19 +79,19 @@ body {
 .button1{
     position: fixed;
     top: 56%;
-    left: 39.4%;
+    left: 34%;
 }
 
 .button2{
     position: fixed;
     top: 56%;
-    left: 46.8%;
+    left: 45%;
 }
 
 .button3{
     position: fixed;
     top: 56%;
-    left: 54.25%;
+    left: 56%;
 }
 /* The sidebar menu */
 .sidebar {

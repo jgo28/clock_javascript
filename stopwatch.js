@@ -84,7 +84,7 @@ function startStop(){
     }
     else{
 
-        window.clearInterval(interval);
+        window.clearInterval(intervalSW);
         document.getElementById("startStop").innerHTML = "Start";
         status = false;
     }
@@ -94,7 +94,7 @@ function startStop(){
 
 //reset stopwatch function
 function resetsw(){
-    window.clearInterval(interval);
+    window.clearInterval(intervalSW);
 //    miliseconds = 0;
     seconds = 0;
     minutes = 0;

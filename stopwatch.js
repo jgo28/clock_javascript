@@ -1,4 +1,3 @@
-
 //Define vars to hold time values
 //let miliseconds = 0;
 let seconds = 0;
@@ -106,15 +105,14 @@ function reset(){
     document.getElementById("startStop").innerHTML = "Start";
     status = false;
 }
-// Hides Stopwatch UI
-function hideStopwatch(mode) {
-    var Stopwatch_startStop = document.getElementById("display");
-    var Stopwatch_display = document.getElementById("startStop");
-    if (mode === 1){// reveal ui elements
-        Stopwatch_startStop.style.display = "block";
-        Stopwatch_display.style.display = "block";
-    }else{    // hide ui elements
-        Stopwatch_startStop.style.display = "none";
-        Stopwatch_display.style.display = "none";
-    }
-  }
+
+function hideStartStop(mode){
+	var y = document.getElementById("display");
+	
+	if (mode === 1){
+		y.style.display = "block";
+	}
+	else {
+		y.style.display = "none";
+	}
+}

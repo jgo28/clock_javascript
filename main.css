@@ -53,7 +53,24 @@ body {
     font-size: 60px;
     background: white;
     text-align: center;
-    transform: translateX(550%) translateY(320%); 
+}
+
+.timerInput1{
+  position: fixed;
+  top: 46%;
+  left: 39%; 
+}
+
+.timerInput2{
+  position: fixed;
+  top: 46%;
+  left: 47%; 
+}
+
+.timerInput3{
+  position: fixed;
+  top: 46%;
+  left: 55%; 
 }
 
 .timerButton{

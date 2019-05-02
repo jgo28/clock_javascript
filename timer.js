@@ -1,7 +1,5 @@
 "use strict";
 
-document.getElementById("timer").style.display = "none";
-document.getElementById("timer_buttons").style.display = "none";
  
 // Hides timer UI
 function hideTimer(mode) {

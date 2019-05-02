@@ -4,6 +4,9 @@
 */
 "use strict";
 
+document.getElementById("timer").style.display = "none";
+document.getElementById("timer_buttons").style.display = "none";
+
 var time_mode = 0;  // controls time modes: 0 = 12-hour; 1 = 24-hour
 
 var switch_mode = document.getElementById("switch_mode");   // create switch_mode id

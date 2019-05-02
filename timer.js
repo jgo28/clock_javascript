@@ -12,6 +12,9 @@ function hideTimer(mode) {
       buttons.style.display = "block";
       if (document.getElementById("start").disabled == true){
         timer.style.display = "none";
+        time.style.display = "block";
+      }else{
+        time.style.display = "none";
       }
 
 

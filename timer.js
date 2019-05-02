@@ -2,19 +2,16 @@
 
 document.getElementById("timer").style.display = "none";
 document.getElementById("timer_buttons").style.display = "none";
-document.getElementById("t_clock").style.display = "none";
  
 // Hides timer UI
 function hideTimer(mode) {
   var timer = document.getElementById("timer");
   var buttons = document.getElementById("timer_buttons");
-  var clock = document.getElementById("t_clock");
   var time = document.getElementById("time");
 
   if (mode === 1){// reveal ui elements
       timer.style.display = "block";
       buttons.style.display = "block";
-      clock.style.display = "block";
       time.style.display = "block";
       if (document.getElementById("start").disabled == true){
         timer.style.display = "none";
@@ -24,7 +21,6 @@ function hideTimer(mode) {
   }else{    // hide ui elements
       timer.style.display = "none";
       buttons.style.display = "none";
-      clock.style.display = "none";
       time.style.display = "none";
       if (document.getElementById("start").disabled == true){
         timer.style.display = "none";
@@ -34,17 +30,16 @@ function hideTimer(mode) {
 
 //Reset button
 function reset(){
+  clearInterval(interval);
   document.getElementById("start").removeAttribute("disabled");
 
   var hours = document.getElementById("hours");
   var minutes = document.getElementById("minutes");
   var seconds = document.getElementById("seconds");
   var timer = document.getElementById("timer");
-  var clock = document.getElementById("t_clock");
   var time = document.getElementById("time");
 
   timer.style.display = "block";
-  clock.style.display = "none";
   time.style.display = "none";
 
   hours.value = "";
@@ -62,12 +57,10 @@ function start(){
   var seconds = document.getElementById("seconds").value;
 
   var timer = document.getElementById("timer");
-  var t_clock = document.getElementById("t_clock");
-  t_clock.style.display = "none";
   timer.style.display = "none";
 
   var total_time_seconds = (hours * 360 * 10) + (minutes * 60) + seconds
-  document.getElementById("t_clock").textContent =  startTimer(total_time_seconds, display);
+  startTimer(total_time_seconds, display);
 
 }
 
@@ -84,7 +77,7 @@ function pause(){
   else if(paused){
     paused = false;
     document.getElementById("pause").textContent = "Pause";
-    document.getElementById("t_clock").textContent =  startTimer(timeLeft, display);
+    startTimer(timeLeft, display);
   }
 }
 
@@ -119,7 +112,6 @@ function startTimer(duration, display) {
 
       if (diff < 0){
         reset();
-        clearInterval(interval);
         alert("Times is up")
       }
   };

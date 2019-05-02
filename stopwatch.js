@@ -1,3 +1,9 @@
+/*
+    Authors: Joshua Go, Mauricio Velazquez, Davis Fairchild
+    Description: Stopwatch features and functions
+*/
+"use strict";
+
 document.getElementById("startStop").style.display = "none";
 document.getElementById("display").style.display = "none";
 document.getElementById("resetsw").style.display = "none";

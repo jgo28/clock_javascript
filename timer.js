@@ -1,5 +1,8 @@
+/*
+  Authors: Joshua Go, Mauricio Velazquez, Davis Fairchild
+  Description: Timer features and functions
+*/
 "use strict";
-
  
 // Hides timer UI
 function hideTimer(mode) {
@@ -113,7 +116,7 @@ function startTimer(duration, display) {
       display.textContent = hours + ":" + minutes + ":" + seconds; 
 
       if (diff < 0){
-        alert("Times is up")
+        alert("Time is up")
 
         document.getElementById("reset").click();
         document.getElementById("timerButton").click();

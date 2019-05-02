@@ -1,5 +1,6 @@
 /*
-    Contains functions to create the clock and change certain aspects of what time is displayed on
+    Authors: Joshua Go, Mauricio Velazquez, Davis Fairchild
+    Description: Contains functions to create the clock and change certain aspects of what time is displayed on
     the webpage.
 */
 "use strict";

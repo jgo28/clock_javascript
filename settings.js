@@ -1,5 +1,6 @@
-/*
-    Contains functions to allow the user to customize the application
+/*  
+    Authors: Joshua Go, Mauricio Velazquez, Davis Fairchild
+    Description: Contains functions to allow the user to customize the application
 */
 "use strict";
 

@@ -1,3 +1,6 @@
+document.getElementById("startStop").style.display = "none";
+document.getElementById("display").style.display = "none";
+document.getElementById("resetsw").style.display = "none";
 //Define vars to hold time values
 //let miliseconds = 0;
 let seconds = 0;
@@ -75,7 +78,7 @@ function startStop(){
     if(status === false){
 
         //Start the stopwatch(by calling the set interval function)
-        interval = window.setInterval(stopWatch, 1);
+        interval = window.setInterval(stopWatch, 1000);
         document.getElementById("startStop").innerHTML = "Stop";
         status = true;
     }
@@ -90,8 +93,8 @@ function startStop(){
 
 
 //reset stopwatch function
-function reset(){
-
+function resetsw(){
+    console.log("BFESAFNJSFNAJ");
     window.clearInterval(interval);
 //    miliseconds = 0;
     seconds = 0;
@@ -100,19 +103,21 @@ function reset(){
 //    displayMiliseconds = "0" + miliseconds.toString();
     displaySeconds = "0" + seconds.toString();
     displayMinutes = "0" + minutes.toString();
-    displaySeconds = "0" + seconds.toString();
+    displayHours = "0" + hours.toString();
     document.getElementById("display").innerHTML = displayHours + ":" + displayMinutes + ":" + displaySeconds;
     document.getElementById("startStop").innerHTML = "Start";
     status = false;
 }
 
-function hideStartStop(mode){
-	var y = document.getElementById("display");
-	
-	if (mode === 1){
-		y.style.display = "block";
-	}
-	else {
-		y.style.display = "none";
-	}
+
+function hideSW(mode){
+    if (mode == 0){
+        document.getElementById("startStop").style.display = "none";
+        document.getElementById("display").style.display = "none";
+        document.getElementById("resetsw").style.display = "none";
+    }else{
+        document.getElementById("startStop").style.display = "block";
+        document.getElementById("display").style.display = "block";
+        document.getElementById("resetsw").style.display = "block";
+    }
 }

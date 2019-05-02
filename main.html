@@ -6,9 +6,9 @@
     
     <div class="topnav" style="text-align:center;">
         <!-- Buttons to change between different features of the app -->
-        <button onclick= "hideClock(1), hideTimer(0)" class = "feature_button" >Clock</button>
-        <button id="timerButton" onclick= "hideClock(0), hideTimer(1)" class = "feature_button" >Timer</button>
-        <button onclick= "hideClock(0), hideTimer(0)" class = "feature_button" >Stopwatch</button>
+        <button onclick= "hideClock(1), hideTimer(0), hideSW(0)" class = "feature_button" >Clock</button>
+        <button id="timerButton" onclick= "hideClock(0), hideTimer(1), hideSW(0)" class = "feature_button" >Timer</button>
+        <button onclick= "hideClock(0), hideTimer(0), hideSW(1)" class = "feature_button" >Stopwatch</button>
     </div>
 
     <!-- Display the time-->
@@ -95,10 +95,23 @@
 
     <div><span id="time" class="clock"></span></div>
 
-
+    <body>
+    
+        <div class="container">
+    
+            <div id="display" class="clock">
+                00:00:00
+            </div>
+               <button id="startStop" class = "timerButton button1" onClick="startStop()">Start</button>
+               <button id="resetsw" class = "timerButton button3" onClick="resetsw()">Reset</button>
+    
+        </div>
+    
+    </body>
   
 </body>
     <!-- Load Javascript files -->
+    <script type = "text/javascript" src = "stopwatch.js"></script>
     <script type = "text/javascript" src = "clock.js" ></script>
     <script type = "text/javascript" src = "timer.js" ></script>
     <script type = "text/javascript" src = "settings.js" ></script>

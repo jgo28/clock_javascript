@@ -12,7 +12,6 @@ function hideTimer(mode) {
   if (mode === 1){// reveal ui elements
       timer.style.display = "block";
       buttons.style.display = "block";
-      time.style.display = "block";
       if (document.getElementById("start").disabled == true){
         timer.style.display = "none";
       }
@@ -21,10 +20,7 @@ function hideTimer(mode) {
   }else{    // hide ui elements
       timer.style.display = "none";
       buttons.style.display = "none";
-      time.style.display = "none";
-      if (document.getElementById("start").disabled == true){
-        timer.style.display = "none";
-            }
+      time.style.display = "none";            
   }
 }
 
@@ -105,7 +101,6 @@ function startTimer(duration, display) {
       // startTimer() was called
       diff = duration - (((Date.now() - start) / 1000) | 0);
 
-      // does the same job as parseInt truncates the float
       hours = Math.floor((diff/(60*60)));
       minutes = Math.floor( (diff/60) % 60 );
       seconds = Math.floor( (diff) % 60 );
@@ -117,8 +112,11 @@ function startTimer(duration, display) {
       display.textContent = hours + ":" + minutes + ":" + seconds; 
 
       if (diff < 0){
-        reset();
         alert("Times is up")
+
+        document.getElementById("reset").click();
+        document.getElementById("timerButton").click();
+
       }
   };
   timer();

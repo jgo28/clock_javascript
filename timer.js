@@ -33,6 +33,9 @@ function reset(){
   clearInterval(interval);
   document.getElementById("start").removeAttribute("disabled");
 
+  paused = false;
+  document.getElementById("pause").textContent = "Pause";
+
   var hours = document.getElementById("hours");
   var minutes = document.getElementById("minutes");
   var seconds = document.getElementById("seconds");
@@ -55,9 +58,12 @@ function start(){
   var hours = document.getElementById("hours").value;
   var minutes = document.getElementById("minutes").value;
   var seconds = document.getElementById("seconds").value;
+  var time = document.getElementById("time");
+
 
   var timer = document.getElementById("timer");
   timer.style.display = "none";
+  time.style.display = "block";
 
   var total_time_seconds = (hours * 360 * 10) + (minutes * 60) + seconds
   startTimer(total_time_seconds, display);

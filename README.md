@@ -1,3 +1,4 @@
+# Clock Application
 This is a web application that has three main features: a clock, a timer, and a stopwatch. The user can swap between
 these three modes by clicking the buttons at the top of the application. 
 
